@@ -1,0 +1,83 @@
+
+****************************************
+Part A
+
+Linear Regression - 
+	Training Accuracy: 0.86078173034694772
+	Testing Accuracy: 0.82395087001023537
+
+SVM -
+	Training Accuracy: 1.0
+	Testing Accuracy: 0.80245649948822928
+
+MLP - 
+	Training Accuracy: 1.0
+	Testing Accuracy: 0.81269191402251795
+
+Random Forest - 
+	Training Accuracy: 0.997364953886693
+	Testing Accuracy: 0.94677584442169904
+
+****************************************
+Part B - Hyperparameter tuning
+
+Random Forest - 
+	n_estimators: 
+		What it does (at most 25 words):number of trees in the foreset
+		Values tested (at least 3): 10, 55, 100
+
+	max_depth: 
+		What it does:max number of levels in each decision tree
+		Values tested (at least 3): 10, 55, 100
+		
+	Best combination of parameter values:
+		n_estimators: 100
+		max_depth: 55
+
+	Testing Accuracy before tuning (default parameters): 0.94677584442169904
+	Testing Accuracy after tuning:0.960081883316
+
+
+SVM -
+	Kernels: 
+		What it does: Specifies the kernel type to be used in the algorithm.
+		Values tested: rbf, linear
+	C: 
+		What it does: Penalty parameter C of the error term.
+		Values tested (at least 3): 0.0001,0.1,100
+		
+	Best combination of parameter values: 
+		Kernel: rbf
+		C: 100
+	
+	Testing Accuracy before tuning  (default parameters): 0.80245649948822928
+	Testing Accuracy after tuning:0.904810644831
+
+
+****************************************
+Part C
+
+For your SVM's CV run from part B, state the highest mean testing accuracy 
+across the sets of parameter values and its corresponding mean train score and mean fit time. 
+
+SVM's highest mean testing/cross-validated accuracy:84% 
+SVM's mean train score: 0.87303005630349129
+SVM's mean fit time: 1.6331858396530152
+
+****************************************
+Part D
+
+Tuned SVM's testing accuracy BEFORE preprocessing: 0.802456499488
+Tuned SVM's testing accuracy AFTER preprocessing: 0.969293756397
+Why you think it increased, decreased, or stayed the same: The accuracy after preprocessing is increased.This is because normalization helps to reduce the dominate effect brought by large scale features.      
+
+****************************************
+Part E
+
+Best Classifier:SVM
+Why: Although SVM and Random Forest have competitive accuracy, the running time for SVM is faster than Random Forest. 
+
+
+
+
+
